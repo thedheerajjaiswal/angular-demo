@@ -1,0 +1,77 @@
+<h1>*ngFor Example </h1>
+<!-- <tr *ngFor="let data of persons">
+    <td>{{data.id}}</td> |
+    <td>{{data.name}}</td>
+</tr> -->
+<hr>
+
+<!-- <tr *ngFor="let data of persons; index as i">
+    <td>{{i}}</td> |
+    <td>{{data.id}}</td> |
+    <td>{{data.name}}</td>
+</tr> -->
+<hr>
+<tr *ngFor="let data of persons; index as i; even as iseven; odd as isodd; ">
+
+    <font *ngIf="iseven" color="orange">Id:{{data.id}} | Name : {{data.name}}</font>
+    <font *ngIf="isodd" color="orangered">Id:{{data.id}} | Name : {{data.name}}</font>
+
+</tr>
+<hr>
+<tr *ngFor="let data of persons; index as i; even as iseven; odd as isodd; first as isfirst; last as islast">
+
+
+    <font *ngIf="isfirst" color="orange">Id:{{data.id}} | Name : {{data.name}}</font>
+    <font *ngIf="!isfirst && !islast" color="teal">Id:{{data.id}} | Name : {{data.name}}</font>
+    <font *ngIf="islast" color="orangered">Id:{{data.id}} | Name : {{data.name}}</font>
+</tr>
+
+<hr>
+
+<table border="1" style="margin: 0 auto;">
+    <tr *ngFor="let data of persons; index as i; even as iseven; odd as isodd; first as isfirst; last as islast">
+
+
+        <td>
+            <font *ngIf="isfirst" color="orange">Id:{{data.id}} | Name : {{data.name}}</font>
+
+            <font *ngIf="!isfirst && !islast" color="teal">Id:{{data.id}} | Name : {{data.name}}</font>
+
+            <font *ngIf="islast" color="orangered">Id:{{data.id}} | Name : {{data.name}}</font>
+        </td>
+    </tr>
+</table>
+
+<!-- Using ngFor without *  -->
+<!-- <ng-template ngFor let-data [ngForOf]="persons" let-i="index" let-iseven="even" let-isodd="odd" let-isfirst="first"
+         let-islast="last"> -->
+
+<!-- <ng-template ngFor let-data [ngForOf]="persons" let-i="index" let-iseven="even" let-isodd="odd" let-isfirst="first"
+    let-islast="last">
+    <div>
+        <font color="red" *ngIf="isfirst">{{i + 1}} | ID: {{data.id}} | Name: {{data.name}}</font>
+        <font *ngIf="!isfirst && !islast" color="teal">{{i + 1}} | ID: {{data.id}} | Name: {{data.name}}</font>
+        <font color="green" *ngIf="islast">{{i +1}} | ID: {{data.id}} | Name: {{data.name}}</font>
+    </div>
+</ng-template> -->
+
+<!-- using async pipe in ngfor -->
+<!-- <div *ngFor="let data of getpersons | async">
+    Id: {{data.id}} | Name : {{data.name}}
+</div> -->
+
+<hr>
+
+<button (click)="getalldata()">Refresh</button>
+<table border="1" style="margin: 0 auto;">
+    <tr>
+        <th>Persons ID</th>
+        <th>Persons Name </th>
+    </tr>
+
+    <tr *ngFor="let data of persons; trackBy:fntrackby">
+        <td>{{data.id}}</td>
+        <td>{{data.name}}</td>
+    </tr>
+
+</table>

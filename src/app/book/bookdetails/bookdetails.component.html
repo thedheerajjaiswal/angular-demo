@@ -1,0 +1,21 @@
+<!-- <h2>Book master with single parameter</h2>
+<ul>
+    <li *ngFor="let book of myallbooks">
+        Id :{{book.id}} | Name : {{book.name}} |
+        <a [routerLink]="['/bookdetails' , book.id]">Show Details</a>
+    </li>
+</ul>
+<hr> -->
+
+<h2>Show Book Details</h2>
+
+<ul>
+    <li> ID: {{Bookdetails.id}}</li>
+    <li> NAME: {{Bookdetails.name}}</li>
+    <li> Price: {{Bookdetails.price}}</li>
+    <li> Description: {{Bookdetails.description}}</li>
+
+</ul>
+
+
+<button (click)="goback()">Go Back</button>

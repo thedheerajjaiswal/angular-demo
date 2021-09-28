@@ -1,0 +1,26 @@
+<form [formGroup]="userForm" (ngSubmit)="onFormSubmit()">
+    <div>
+        <input type="text" placeholder=" Enter First Name" formControlName="fname">
+        <span *ngIf="fNameFc.invalid">First name is required</span>
+    </div>
+    <div>
+        <input type="text" placeholder=" Enter Last Name" formControlName="lname">
+        <span *ngIf="lNameFc.invalid">Last name is required</span>
+    </div>
+    <div formGroupName="address">
+        <div>
+            <input type="text" placeholder=" Enter House Number" formControlName="housenumber">
+            <span *ngIf="addressFc.get('housenumber').invalid">housenumber is required</span>
+        </div>
+        <div>
+            <input type="text" placeholder=" Enter city Name" formControlName="city">
+            <span *ngIf="addressFc.get('city').invalid">city Name is required</span>
+        </div>
+        <div>
+            <input type="text" placeholder=" Enter pinecode" formControlName="pincode">
+            <span *ngIf="addressFc.get('pincode').invalid"> pincode is required</span>
+        </div>
+    </div>
+    <button type="submit">Register</button>
+
+</form>

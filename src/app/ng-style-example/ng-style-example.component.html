@@ -1,0 +1,6 @@
+<h1>ng-style-example !</h1>
+<!-- <div [ngStyle]="{'background-color':countryname == 'pakistan'?'green' :'red'}">Pakistan</div> -->
+
+<div *ngFor="let data of country">
+    <div [ngStyle]="{'background-color' : getcolor(data.country)}">Name:{{data.name}} | Country : {{data.country}}</div>
+</div>

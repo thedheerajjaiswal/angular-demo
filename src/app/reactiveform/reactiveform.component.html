@@ -1,0 +1,58 @@
+<h1>Reactive Driven Form !</h1>
+
+<div>
+    <form [formGroup]='regForm' (ngSubmit)="Register()">
+        <div>
+            <input type="text" name="" placeholder="Enter your first name" formControlName="fname">
+            <div *ngIf="regForm.controls['fname'].touched && !regForm.controls['fname'].valid">
+                <span *ngIf="regForm.controls['fname'].hasError('required')">First Name is required</span>
+                <span *ngIf="regForm.controls['fname'].hasError('minlength')">Name Must be atleast 3 digit</span>
+                <span *ngIf="regForm.controls['fname'].hasError('maxlength')">Name must not be greater than 10
+                    character</span>
+            </div>
+        </div>
+        <div>
+            <input type="text" name="" placeholder="Enter your last name" formControlName="lname">
+            <div *ngIf="regForm.controls['lname'].touched && regForm.controls['lname'].invalid">
+                <span *ngIf="regForm.controls['lname'].hasError('required')">Last Name is required</span>
+                <span *ngIf="regForm.controls['lname'].hasError('maxlength')">Name Must not be more then 9 digit</span>
+            </div>
+        </div>
+        <div>
+            <input type="text" name="" placeholder="abc@example.com" formControlName="email">
+            <div *ngIf="regForm.controls['email'].touched && regForm.controls['email'].invalid">
+                <span *ngIf="regForm.controls['email'].hasError('required')"> Email address is required</span>
+                <span *ngIf="regForm.controls['email'].hasError('email')">Enter Proper emial address using @ sign</span>
+            </div>
+        </div>
+        <!-- <div>
+            <input type="text" name="" placeholder="Enter your mobile no " formControlName="mobileno">
+            <div *ngIf="regForm.controls['mobileno'].touched && regForm.controls['mobileno'].invalid">
+                <span *ngIf="regForm.controls['mobileno'].hasError('required')">Mobile no is required</span>
+            </div>
+        </div> -->
+
+        <div formArrayName='mobilenos'>
+            <div *ngFor="let mobileno of regForm.get('mobilenos').controls, index as idx">
+                <input type="text" name="" placeholder="Enter your mobile no " [formControlName]="idx">
+                <button type="button" (click)="deleterow(idx)">Delete Row</button>
+
+            </div>
+            <button type="button" (click)="addMore()">Add More</button>
+
+        </div>
+        <div>
+            <!-- <input type="submit" value="Register"> -->
+            <button type="submit" [disabled]="regForm.invalid">Register</button>
+
+
+            <button type="reset">Reset</button>
+
+
+            <button type="button" (click)="reset()">Reset !!</button>
+
+            <button type="button" (click)="filldata()">Fill Data !!</button>
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,39 @@
+<h1>pipes-example........!</h1>
+
+<h1>{{name | uppercase}}</h1>
+<hr>
+<h1>{{name | lowercase}}</h1>
+<hr>
+<h1>{{name | titlecase}}</h1>
+<hr>
+<h1>{{name | slice:3}}</h1>
+<hr>
+<h1>{{name | slice : 1:10}}</h1>
+<hr>
+<h1> {{empdetails | json}}</h1>
+<hr>
+<h1 ngNonBindable> {{12.3456789 | number}} </h1>
+
+<h2> {{12.3456789 | number:'3.2-4'}}</h2>
+<hr>
+<h2> {{12.345 | percent}}</h2>
+<hr>
+<h2> {{12.345 | currency:'INR'}}</h2>
+<hr>
+<hr>
+<h2>{{currentDate}}</h2>
+<h2>{{currentDate |date}}</h2>
+<h2>{{currentDate | date:'shortDate'}}</h2>
+<h2>{{currentDate | date:'longDate'}}</h2>
+<h2>{{currentDate | date:'fullDate'}}</h2>
+<h2>{{currentDate | date:'dd/MMM/YYYY'}}</h2>
+<h2>{{currentDate |date | uppercase}}</h2>
+<hr>
+<h1>Custom Pipes</h1>
+<h2>{{name | welcome}}</h2>
+<h2>{{name |uppercase|welcome}}</h2>
+<h2>{{name | welcome |uppercase}}</h2>
+My name is <span [outerHTML]='name | bold'></span>
+<h2>{{name | reverse}}</h2>
+<h2>{{str | limitwords}}</h2>
+<h2>{{str | limitwords :30 :'*********'}}</h2>

@@ -1,0 +1,26 @@
+<h1>ng-switch-example!</h1>
+
+<div [ngSwitch]="name">
+    <div *ngSwitchCase="'Dheeraj'">Hello Dheeraj</div>
+    <div *ngSwitchCase="'Vijay'">Hello Vijay</div>
+    <div *ngSwitchCase="'Ranjan'">Hello Ranjan</div>
+    <div *ngSwitchCase="'David'">Hello David</div>
+    <div *ngSwitchDefault>Hello Ji No Data Found</div>
+</div>
+
+<hr>
+<label>Enter Your Name :</label>
+<input type="text" #txtarea (keyup)="0">
+<div [ngSwitch]="txtarea.value">
+    <div *ngSwitchCase="'Dheeraj'">Hello Dheeraj</div>
+    <div *ngSwitchCase="'Vijay'">Hello Vijay</div>
+    <div *ngSwitchCase="'Ranjan'">Hello Ranjan</div>
+    <div *ngSwitchCase="'David'">Hello David</div>
+    <div *ngSwitchDefault>Hello Ji No Data Found</div>
+</div>
+
+<hr>
+<div *ngFor="let id of ids" ngSwitch="{{id%2}}">
+    <div *ngSwitchCase="0" class="even">Id : {{id}} - I am Even</div>
+    <div *ngSwitchCase="1" class="odd">Id : {{id}} - I am Odd</div>
+</div>

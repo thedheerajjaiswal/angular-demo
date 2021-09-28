@@ -1,0 +1,19 @@
+
+.one{
+    background-color: cadetblue;
+    color: chocolate;
+    text-align: center;
+    text-transform: uppercase;
+}
+.two {
+  background-color: darkgoldenrod;
+  color: darkgreen;
+  text-align: center;
+  text-transform: uppercase;
+}
+.three{
+    font-size: 40px;
+}
+.four {
+  font-size: 60px;
+}

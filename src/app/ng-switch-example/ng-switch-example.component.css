@@ -1,0 +1,13 @@
+.odd{
+    background-color: teal;
+    color: whitesmoke;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.even {
+  background-color: yellowgreen;
+  color: whitesmoke;
+  text-transform: uppercase;
+  text-align: center;
+}

@@ -1,0 +1,82 @@
+<h1>data-binding-example..!</h1>
+<!--Difference b/w Property & Atribute Binding  -->
+<!-- <input type="text" id="textid" value="Dheeraj"> -->
+<!-- Attribute Binding  -->
+<!-- <table border="1">
+    <tr>
+        <td [attr.colspan]="col">Emp Details</td>
+    </tr>
+    <tr>
+        <td>Dheeraj</td>
+        <td>Jaiswal</td>
+    </tr>
+    <tr>
+        <td>Momo</td>
+        <td>Jha</td>
+    </tr>
+</table> -->
+<!-- <hr> -->
+<!-- style Binding -->
+<!-- <button style="color: lightcoral;">Click Me</button> <br>
+<button style="color: lightcoral;" [style.font-weight]="'bold'">Click Me</button>
+<br>
+<button style="color: lightcoral;" [style.font-weight]="isbold ? 'bold':'normal'">Click Me</button> <br>
+<button style="color: lightcoral;" [style.font-size.px]="fontsize">Click Me</button> <br>
+<button style="color: lightcoral;" [ngStyle]="AddCssStyle()">Click Me</button> -->
+<!-- <hr> -->
+
+<!-- Class Binding -->
+<!-- <button class="colorClass">Class Binding</button> -->
+<!-- 
+<button [class]="cssClasstoApply">Class Binding</button><br>
+<button [class.boldClass]="isbold">Class Binding</button><br>
+<button [class.boldClass]="!isbold">Class Binding</button><br>
+<hr>
+<button [ngClass]="AddCssClass()">Class Binding</button> -->
+
+<hr>
+<!-- Property Binding -->
+<!-- <h1>Property Binding</h1>
+<span [innerHTML]='myName'></span>
+
+<br>
+<!-- <span [outerHTML]='myName'></span> -->
+
+<!-- <h1>Interpolation Example</h1>
+<span innerHTML='{{myName}}'></span>
+
+<h1>Property Binding</h1>
+<img [src]="imgpath" alt="childern" height="200px">
+<hr>
+<h1>Interpolation Example</h1>
+<img src="{{imgpath}}" alt="childern" height="200px">  -->
+<!-- 
+
+<button (click)="enableDisable()">Enable and Disable button</button>
+<h1>Property Binding</h1>
+<button [disabled]='isdisabled'>Click Me</button>
+<hr>
+<h1>Interpolation Binding</h1>
+<button disabled='{{isdisabled}}'>Click Me</button> -->
+
+
+<h1>Event Binding</h1>
+<!-- <button (click)="clickme1()">Click Me 1</button>
+<button on-click="clickme2()">Click Me 2</button> -->
+
+<!-- <input type="text" (keyup)="keyup()" (keydown)="keydown()"> -->
+<!-- <input type="text" (input)="input()"> -->
+
+<!-- <input type="text" (keyup)="setmsg($event.target)">
+
+Your Message : {{msg}} -->
+<!-- <hr> -->
+<!-- 
+<input type="text" #txtvalue (keyup)="msg = txtvalue.value">
+
+Your Message : {{msg}} -->
+<!-- 
+<input type="text" [value]="msg" #txt (keyup)="setmsg(txt.value)">
+Message : {{msg}} -->
+<input type="text" [(ngModel)]="msg">
+Message: {{msg}}

@@ -1,0 +1,84 @@
+<!-- <h2>Requesting JSON using HttpClient.get using subscribe method</h2>
+<ul>
+    <li *ngFor="let data of AllBook">
+        id: {{data.id}} |
+        name: {{data.name}} |
+        category: {{data.category}} |
+        year : {{data.year}}
+    </li>
+</ul>
+<hr>
+<h2>Requesting JSON using HttpClient.get using async pipe with observable</h2>
+<ul>
+    <li *ngFor="let data of AllBook$ | async">
+        id: {{data.id}} |
+        name: {{data.name}} |
+        category: {{data.category}} |
+        year :{{data.year}}
+    </li>
+</ul>
+<hr>
+<h2>Using httpHeaders</h2>
+<ul>
+    <li *ngFor="let data of searchBooks">
+        id: {{data.id}} |
+        name: {{data.name}} |
+        category: {{data.category}} |
+        year :{{data.year}}
+    </li>
+</ul>
+<hr> -->
+<!-- <h2>Using httpParams</h2>
+<ul>
+    <li *ngFor="let data of searchBook">
+        id: {{data.id}} |
+        name: {{data.name}} |
+        category: {{data.category}} |
+        year :{{data.year}}
+    </li>
+</ul>
+<hr> -->
+
+
+<h2>HttpClient.post()</h2>
+
+<button (click)="saveBook()">Save Book</button>
+<h2>All Books After Saved</h2>
+
+<ul>
+    <li *ngFor="let data of allBookAfterSaved">
+        id: {{data.id}} |
+        name: {{data.name}} |
+        category: {{data.category}} |
+        year : {{data.year}}
+    </li>
+</ul>
+<hr>
+<h2>HttpClient.put()</h2>
+
+<button (click)="updateBook()">Update Book</button>
+<h2>All Books After Update</h2>
+
+<ul>
+    <li *ngFor="let data of allBookAfterUpdate">
+        id: {{data.id}} |
+        name: {{data.name}} |
+        category: {{data.category}} |
+        year : {{data.year}}
+    </li>
+</ul>
+
+<hr>
+<h2>HttpClient.delete()</h2>
+
+<button (click)="deleteBook()">Delete Book</button>
+<h2>All Books After Update</h2>
+
+<ul>
+    <li *ngFor="let data of allBookAfterDelete">
+        id: {{data.id}} |
+        name: {{data.name}} |
+        category: {{data.category}} |
+        year : {{data.year}}
+    </li>
+</ul>

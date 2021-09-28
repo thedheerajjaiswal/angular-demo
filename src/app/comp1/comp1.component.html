@@ -1,0 +1,10 @@
+<h1>comp1 works!</h1>
+Enter your number : <input type="text" #txt>
+<button (click)="addnumber(txt.value)">Add Number</button>
+
+<br>
+<ul>
+    <li *ngFor="let data of list1">
+        {{data}}
+    </li>
+</ul>

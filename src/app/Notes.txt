@@ -1,0 +1,97 @@
+Notes
+------
+<=== Component ===>
+____________________
+1)preserveWhitespaces
+2)viewProviders
+3)interpolation
+4) Encapsulation
+5) Input Property
+6) Output Property
+
+
+<=== Directive ===>
+1)Component Directive
+
+2) Structural Directive
+     I)   NgIf (*ngIf)
+     II)  NgFor (*ngFor)
+     III) NgSwitch (*ngSwitch)
+
+3) Attribute Directive
+     I)   NgClass
+     II)  Ngstyle
+
+<=== Data Bindings Example ===>
+1) One way Data Bindings
+   I)Component to View
+     i)Interpolation Bindings
+     ii)Property Binding     
+     iii)style Bindings
+     iv)Class Bindings
+     v)Attribute Bindings
+
+  II)View to Component
+     i) Event Binding
+
+2) Two way Data Binding     
+
+<=== Pipes ===>
+1) Built-in Pipes
+     i)Parameterized Pipes
+     ii)Chaning Pipes
+2) Custom Pipes     
+
+
+<=== Input & Output Decorator ===>
+     -Input Decorator
+     -Output Decorator
+
+<=== Session Management ===>
+    - local 
+    - Session
+    - Coockies
+
+<=== Services ===>
+     App level Services
+     Component Level Services
+
+
+<=== Routing ===>
+ 1. Parameterized Route (Create a object using (route:ActivatedRoute))
+     using route Snapshot
+          route.Snapshot.params
+          route.Snapshot.paramMap
+     using route Observables
+          route.params.Subscribe
+          route.params.Subscribe
+ 2. Router Guards
+     
+     1.canActive
+     2.canActivechild
+     3.canDeactive
+     4.Resolve
+     5.canLoad
+ 
+ 3. Named & Multiple Router-Outlet(Auxiliary Route) or (Secondary Route) 
+
+ 4. Various Ways of Passing Data to route
+  1  - using route Paramater
+  2 - using Query String Or query params
+  3 -Static data using the data Property
+  4-Dynamic data using state object
+
+
+<=== Observables & Subscribe ===>
+     Observable with Subscrib
+     Observable with async
+     Get Book By Id using Subscribe
+     Get Book By Id using async
+
+<=== Modules ===>
+
+    1. Feature Modules
+    2. Modules Loading
+         - Eager Loading
+         - Lazy Loading
+         - Preloading 

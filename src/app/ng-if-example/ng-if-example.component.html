@@ -1,0 +1,52 @@
+<input type="radio" name="radio" checked (click)="isclicked('male')">Male
+<input type="radio" name="radio" (click)="isclicked('female')">Female
+<input type="radio" name="radio" (click)="isclicked('other')">Other
+
+<h1 *ngIf='gender == "male"'>I am Male</h1>
+<h1 *ngIf='gender == "female"'>I am Female</h1>
+<h1 *ngIf='gender == "other"'>Preffered Not to Disclose</h1>
+
+<hr>
+<!-- Using Class  -->
+<div *ngIf="emp1">
+    Id : {{emp1.id}} | Name : {{emp1.name}}
+</div>
+<div *ngIf="emp2">
+    Id : {{emp2.id}} | Name : {{emp2.name}}
+</div>
+
+<hr>
+<!-- Using Enum -->
+<div *ngIf="myEnum.three > 24">
+    {{myEnum.three}} is greater than 24
+</div>
+
+<hr>
+<!-- Using ngIf with then  and else block -->
+<input type="radio" name="radio" checked (click)="onclick(isValid)">Male
+<input type="radio" name="radio" (click)="onclick(!isValid)">Female
+<br>
+
+
+<ng-template [ngIf]="isValid" [ngIfThen]="thenBlock" [ngIfElse]="elseBlock"></ng-template>
+<ng-template #thenBlock>I am Male</ng-template>
+<ng-template #elseBlock>I am Female</ng-template>
+<hr>
+
+<!-- Loading the component dynamically using ngIf condition -->
+<input type="radio" name="radio" checked (click)="onclick(true)">Male
+<input type="radio" name="radio" (click)="onclick(false)">Female
+<br>
+
+<app-three *ngIf="isValid"></app-three>
+<app-four *ngIf="!isValid"></app-four>
+
+<!-- ngIf using Async Pipe -->
+{{msg}}
+<br>
+<div *ngIf="msg | async as sms; else elseblock">
+    <b>{{sms}}</b>
+</div>
+<ng-template #elseblock>
+    Loading....
+</ng-template>

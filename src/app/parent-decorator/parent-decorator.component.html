@@ -1,0 +1,7 @@
+<h1>parent-decorator works!</h1>
+Parent Component : <input type="text" #Pcomponent (keyup)='0'>
+
+<hr>
+value Of child-decorator : {{Cdata}}
+
+<app-child-decorator [Pdata]='Pcomponent.value' (childevent)="onchanged($event)"></app-child-decorator>

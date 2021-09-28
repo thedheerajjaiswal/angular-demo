@@ -1,0 +1,18 @@
+<h1>ng-class-example ..!</h1>
+<!-- <div [ngClass]="['one', 'three']">ngclass with string</div>
+<hr>
+<div [ngClass]="'one three'">ngclass with Array</div>
+<hr> -->
+<!-- <div [ngClass]="{'two':true, 'four':true}">ngclass with Object works with 'key':value pair </div> -->
+<!-- <div *ngFor="let data of persons; index as i;">
+    <div [ngClass]="{'one': i%2 == 0,'three': i%2 == 0, 'two': i%2 == 1, 'four': i%2 == 1}">{{i}} -- {{data.id}} |
+        {{data.name}}</div>
+</div> -->
+<div *ngFor="let data of persons; index as i;">
+    <div [ngClass]="{
+        'one':data.name ==='Dheeraj',
+         'two':data.name ==='Chandan',
+          'three':data.name ==='Ankit',
+           'four':data.name ==='Sheshadri'
+    }">{{i}} -- Id:{{data.id}} | Name: {{data.name}}</div>
+</div>

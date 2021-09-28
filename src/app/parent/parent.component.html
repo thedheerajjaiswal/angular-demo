@@ -1,0 +1,8 @@
+<h1>Parent </h1>
+
+<!-- <label> Parent Component : </label>
+<input type="text" #Pcomponent (keyup)="0">
+<app-child [Pdata]="Pcomponent.value"></app-child> -->
+
+Value of child Component : {{Cdata}}
+<app-child (childEvent)="onchange($event)"></app-child>

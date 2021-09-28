@@ -1,0 +1,38 @@
+<h2>Template Registration Form</h2>
+
+<div>
+    <form #regForm='ngForm' (ngSubmit)="register(regForm)">
+        <div>
+            First Name:
+            <input type="text" placeholder="Enter First Name" name="firstname" ngModel required minlength="6"
+                #fname="ngModel" />
+            <div *ngIf='fname.touched && fname.invalid'>
+                <span *ngIf="fname.hasError('required')">*First Name required</span>
+                <span *ngIf="fname.hasError('minlength')">*First name must be atleat 6 digits</span>
+            </div>
+        </div>
+
+        <div>
+            Last Name :
+            <input type="text" placeholder="Enter Last Name" name="lastname" ngModel required #lname="ngModel"
+                minlength="6" />
+            <div *ngIf='lname.touched && lname.invalid'>
+                <span *ngIf="lname.hasError('required')">Last Name is Required</span>
+                <span *ngIf="lname.hasError('minlength')">Last name must be atleat 6 digits</span>
+            </div>
+        </div>
+
+        <div>
+            Email Id :
+            <input type="text" placeholder="Enter Email Id" name="email" ngModel email required #email="ngModel" />
+            <div *ngIf='email.touched && email.invalid'>
+                <span *ngIf="email.hasError('required')">*Email Id required</span>
+                <span *ngIf="email.hasError('email')">*Email must be in proper Format use @ </span>
+            </div>
+        </div>
+
+        <div>
+            <input type="submit" value="register" [disabled]='regForm.invalid'>
+        </div>
+    </form>
+</div>

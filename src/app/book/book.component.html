@@ -1,0 +1,15 @@
+<h2>Book master with single parameter</h2>
+<ul>
+    <li *ngFor="let book of myallbooks">
+        Id :{{book.id}} | Name : {{book.name}} |
+        <a [routerLink]="['/bookdetails' , book.id]">Show Details</a>
+    </li>
+</ul>
+<hr>
+<h2>Book master with Multiple parameter</h2>
+<ul>
+    <li *ngFor="let book of myallbooks">
+        Id :{{book.id}} | Name : {{book.name}} |
+        <a [routerLink]="['/bookdetails' , book.id, book.price]">Show Details</a>
+    </li>
+</ul>

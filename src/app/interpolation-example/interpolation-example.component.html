@@ -1,0 +1,37 @@
+<div style="text-align: center;">
+    My City Name is: <b> {{city}} </b>
+    <br>
+    <button (click)="Changecity()">Change City</button> <br>
+
+    {{'Hello' + city}} <br>
+    {{num1 + city}} <br>
+    {{num1 + num2}} <br>
+    {{num1 - num2}} <br>
+    {{num1 * num2}} <br>
+    {{num1 % num2}} <br>
+    {{num1 / num2}} <br>
+    <hr>
+    {{empDetails}} <br>
+    <!-- Name: {{empDetails.name }} <br>
+    Age: {{empDetails.age}} <br>
+    City: {{empDetails.city}} <br>
+    State: {{empDetails.state}} <br> -->
+    <hr>
+    Name: {{empDetails && empDetails.name }} <br>
+    Age: {{empDetails && empDetails.age}} <br>
+    City: {{empDetails && empDetails.city}} <br>
+    State: {{empDetails && empDetails.state}} <br>
+
+    <!-- <hr>
+    Name: {{ empDetails?.name }} <br>
+    Age: {{ empDetails?.age}} <br>
+    City: {{ empDetails?.city}} <br>
+    State: {{ empDetails?.state}} <br> -->
+
+    <!-- <hr>
+    Name: {{ empDetails?empDetails.name :'No Data Found' }} <br>
+    Age: {{ empDetails?empDetails.age :'No Data Found'}} <br>
+    City: {{ empDetails?empDetails.city :'No Data Found'}} <br>
+    State: {{ empDetails?empDetails.state :'No Data Found'}} <br> -->
+
+</div>
